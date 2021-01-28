@@ -46,14 +46,22 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Technics\ComputerTechnics.cs" />
+    <Compile Include="Technics\Keyboard\BaseMouse.cs" />
+    <Compile Include="Technics\Keyboard\Keyboard.cs" />
+    <Compile Include="Technics\Keyboard\PremiumMouse.cs" />
+    <Compile Include="Technics\Keyboard\StandartMouse.cs" />
+    <Compile Include="Technics\Mouse\StandartMouse.cs" />
+    <Compile Include="Technics\Mouse\PremiumMouse.cs" />
+    <Compile Include="Technics\Mouse\BaseMouse.cs" />
+    <Compile Include="Technics\Mouse\Mouse.cs" />
+    <Compile Include="Technics\Notebook\BaseNotebook.cs" />
+    <Compile Include="Technics\Notebook\Notebook.cs" />
+    <Compile Include="Technics\Notebook\PremiumNotebook.cs" />
+    <Compile Include="Technics\Notebook\StandartNotebook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Technics\keyboard\" />
-    <Folder Include="Technics\Mouse\" />
-    <Folder Include="Technics\Notebook\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

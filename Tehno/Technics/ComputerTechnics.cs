@@ -9,6 +9,6 @@ namespace Tehno.Technics
     public abstract class ComputerTechnics
     {
         public abstract string GetName { get; protected set; }
-        public abstract string GetCostCost { get; protected set; }
+        public abstract double GetCost { get; protected set; }
     }
 }
