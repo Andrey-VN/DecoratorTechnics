@@ -10,21 +10,24 @@ namespace Tehno.Technics.Notebook
     {
         public PremiumNotebook()
         {
-
+            GetName = "Премиальный ноутбук";
+            GetCost = 170000;
         }
         public PremiumNotebook(ComputerTechnics computerTechnics)
         {
             this.computerTechnics = computerTechnics;
+            GetName = "Премиальный ноутбук";
+            GetCost = 170000;
         }
         public override string GetName
         {
             get { return name; }
             protected set
             {
-                if (computerTechnics.GetName == null)
-                    name = "Премиальный ноутбук";
+                if (computerTechnics == default)
+                    name = value;
                 else
-                    name = computerTechnics.GetName + " +Премиальный ноутбук";
+                    name = computerTechnics.GetName + "/" + value;
             }
         }
         public override double GetCost
@@ -32,10 +35,10 @@ namespace Tehno.Technics.Notebook
             get { return cost; }
             protected set
             {
-                if (computerTechnics.GetCost == default)
-                    cost = 170000;
+                if (computerTechnics == default)
+                    cost = value;
                 else
-                    cost = computerTechnics.GetCost + 170000;
+                    cost = computerTechnics.GetCost + value;
             }
         }
     }

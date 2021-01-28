@@ -10,21 +10,24 @@ namespace Tehno.Technics.Keyboard
     {
         public StandartKeyboard()
         {
-
+            GetName = "Стандартная клавиатура";
+            GetCost = 1500;
         }
         public StandartKeyboard(ComputerTechnics computerTechnics)
         {
             this.computerTechnics = computerTechnics;
+            GetName = "Стандартная клавиатура";
+            GetCost = 1500;
         }
         public override string GetName
         {
             get { return name; }
             protected set
             {
-                if (computerTechnics.GetName == null)
-                    name = "Стандартная клавиатура";
+                if (computerTechnics == default)
+                    name = value;
                 else
-                    name = computerTechnics.GetName + " +Стандартная клавиатура";
+                    name = computerTechnics.GetName + "/" + value;
             }
         }
         public override double GetCost
@@ -32,10 +35,10 @@ namespace Tehno.Technics.Keyboard
             get { return cost; }
             protected set
             {
-                if (computerTechnics.GetCost == default)
-                    cost = 1500;
+                if (computerTechnics == default)
+                    cost = value;
                 else
-                    cost = computerTechnics.GetCost + 1500;
+                    cost = computerTechnics.GetCost + value;
             }
         }
     }

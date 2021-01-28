@@ -10,32 +10,37 @@ namespace Tehno.Technics.Mouse
     {
         public PremiumMouse()
         {
-
+            GetName = "Премиальная мышь";
+            GetCost = 1200;
         }
         public PremiumMouse(ComputerTechnics computerTechnics)
         {
             this.computerTechnics = computerTechnics;
+            GetName = "Премиальная мышь";
+            GetCost = 1200;
         }
         public override string GetName
         {
             get { return name; }
             protected set
             {
-                if (computerTechnics.GetName == null)
-                    name = "Премиальная мышь";
+                if (computerTechnics == default)
+                    name = value;
                 else
-                    name = computerTechnics.GetName + " +Премиальная мышь";
+                    name = computerTechnics.GetName + "/" + value;
             }
         }
+
+
         public override double GetCost
         {
             get { return cost; }
             protected set
             {
-                if (computerTechnics.GetCost == default)
-                    cost = 1200;
+                if (computerTechnics == default)
+                    cost = value;
                 else
-                    cost = computerTechnics.GetCost + 1200;
+                    cost = computerTechnics.GetCost + value;
             }
         }
     }

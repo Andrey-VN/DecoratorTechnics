@@ -10,32 +10,37 @@ namespace Tehno.Technics.Mouse
     {
         public StandartMouse()
         {
-
+            GetName = "Стандартная мышь";
+            GetCost = 600;
         }
         public StandartMouse(ComputerTechnics computerTechnics)
         {
             this.computerTechnics = computerTechnics;
+            GetName = "Стандартная мышь";
+            GetCost = 600;
         }
         public override string GetName
         {
             get { return name; }
             protected set
             {
-                if (computerTechnics.GetName == null)
-                    name = "Стандартная мышь";
+                if (computerTechnics == default)
+                    name = value;
                 else
-                    name = computerTechnics.GetName + " +Стандартная мышь";
+                    name = computerTechnics.GetName + "/" + value;
             }
         }
+
+
         public override double GetCost
         {
             get { return cost; }
             protected set
             {
-                if (computerTechnics.GetCost == default)
-                    cost = 600;
+                if (computerTechnics == default)
+                    cost = value;
                 else
-                    cost = computerTechnics.GetCost + 600;
+                    cost = computerTechnics.GetCost + value;
             }
         }
     }
