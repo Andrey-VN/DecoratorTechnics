@@ -8,6 +8,10 @@ namespace Tehno.Technics.Keyboard
 {
     class PremiumKeyboard : Keyboard
     {
+        public PremiumKeyboard()
+        {
+            
+        }
         public PremiumKeyboard(ComputerTechnics computerTechnics)
         {
             this.computerTechnics = computerTechnics;
@@ -15,12 +19,24 @@ namespace Tehno.Technics.Keyboard
         public override string GetName
         {
             get { return name; }
-            protected set { name = computerTechnics.GetName + " +Премиальная клавиатура"; }
+            protected set 
+            {
+                if (computerTechnics.GetName == null)
+                    name = "Премиальная клавиатура";
+                else
+                    name = computerTechnics.GetName + " +Премиальная клавиатура"; 
+            }
         }
         public override double GetCost
         {
             get { return cost; }
-            protected set { cost = computerTechnics.GetCost + 3000; }
+            protected set
+            {
+                if (computerTechnics.GetCost == default)
+                    cost = 3000;
+                else
+                    cost = computerTechnics.GetCost + 3000;
+            }
         }
     }
 }

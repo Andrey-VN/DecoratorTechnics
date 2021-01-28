@@ -8,6 +8,10 @@ namespace Tehno.Technics.Mouse
 {
     class BaseMouse : Mouse
     {
+        public BaseMouse()
+        {
+            
+        }
         public BaseMouse(ComputerTechnics computerTechnics)
         {
             this.computerTechnics = computerTechnics;
@@ -15,12 +19,24 @@ namespace Tehno.Technics.Mouse
         public override string GetName 
         {
             get { return name; }
-            protected set { name = computerTechnics.GetName + " +Базовая мышь"; } 
+            protected set
+            {
+                if (computerTechnics.GetName == null)
+                    name = "Базовая мышь";
+                else
+                    name = computerTechnics.GetName + " +Базовая мышь";
+            }
         }
         public override double GetCost
         {
             get { return cost; }
-            protected set { cost = computerTechnics.GetCost + 300; }
+            protected set
+            {
+                if (computerTechnics.GetCost == default)
+                    cost = 300;
+                else
+                    cost = computerTechnics.GetCost + 300;
+            }
         }
     }
 }

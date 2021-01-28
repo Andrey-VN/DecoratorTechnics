@@ -8,6 +8,10 @@ namespace Tehno.Technics.Notebook
 {
     class PremiumNotebook : Notebook
     {
+        public PremiumNotebook()
+        {
+
+        }
         public PremiumNotebook(ComputerTechnics computerTechnics)
         {
             this.computerTechnics = computerTechnics;
@@ -15,12 +19,24 @@ namespace Tehno.Technics.Notebook
         public override string GetName
         {
             get { return name; }
-            protected set { name = computerTechnics.GetName + " +Премиальный нотбук"; }
+            protected set
+            {
+                if (computerTechnics.GetName == null)
+                    name = "Премиальный ноутбук";
+                else
+                    name = computerTechnics.GetName + " +Премиальный ноутбук";
+            }
         }
         public override double GetCost
         {
             get { return cost; }
-            protected set { cost = computerTechnics.GetCost + 170000; }
+            protected set
+            {
+                if (computerTechnics.GetCost == default)
+                    cost = 170000;
+                else
+                    cost = computerTechnics.GetCost + 170000;
+            }
         }
     }
 }
