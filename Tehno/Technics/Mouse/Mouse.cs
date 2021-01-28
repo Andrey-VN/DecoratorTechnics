@@ -8,5 +8,6 @@ namespace Tehno.Technics.Mouse
 {
     abstract class Mouse : ComputerTechnics
     {
+        protected ComputerTechnics computerTechnics;
     }
 }

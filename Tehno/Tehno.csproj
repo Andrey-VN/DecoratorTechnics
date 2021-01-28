@@ -46,10 +46,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Technics\ComputerTechnics.cs" />
-    <Compile Include="Technics\Keyboard\BaseMouse.cs" />
+    <Compile Include="Technics\Keyboard\BaseKeyboard.cs" />
     <Compile Include="Technics\Keyboard\Keyboard.cs" />
-    <Compile Include="Technics\Keyboard\PremiumMouse.cs" />
-    <Compile Include="Technics\Keyboard\StandartMouse.cs" />
+    <Compile Include="Technics\Keyboard\PremiumKeyboard.cs" />
+    <Compile Include="Technics\Keyboard\StandartKeyboard.cs" />
     <Compile Include="Technics\Mouse\StandartMouse.cs" />
     <Compile Include="Technics\Mouse\PremiumMouse.cs" />
     <Compile Include="Technics\Mouse\BaseMouse.cs" />

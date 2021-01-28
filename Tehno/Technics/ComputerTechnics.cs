@@ -8,6 +8,8 @@ namespace Tehno.Technics
 {
     public abstract class ComputerTechnics
     {
+        protected string name;
+        protected double cost;
         public abstract string GetName { get; protected set; }
         public abstract double GetCost { get; protected set; }
     }

@@ -8,5 +8,6 @@ namespace Tehno.Technics.Notebook
 {
     abstract class Notebook : ComputerTechnics
     {
+        protected ComputerTechnics computerTechnics;
     }
 }

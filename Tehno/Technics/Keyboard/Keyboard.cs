@@ -8,5 +8,6 @@ namespace Tehno.Technics.Keyboard
 {
     abstract class Keyboard : ComputerTechnics
     {
+        protected ComputerTechnics computerTechnics;
     }
 }

@@ -8,7 +8,19 @@ namespace Tehno.Technics.Mouse
 {
     class StandartMouse : Mouse
     {
-        public override string GetName { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
-        public override double GetCost { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
+        public StandartMouse(ComputerTechnics computerTechnics)
+        {
+            this.computerTechnics = computerTechnics;
+        }
+        public override string GetName
+        {
+            get { return name; }
+            protected set { name = computerTechnics.GetName + " +Стандартная мышь"; }
+        }
+        public override double GetCost
+        {
+            get { return cost; }
+            protected set { cost = computerTechnics.GetCost + 600; }
+        }
     }
 }

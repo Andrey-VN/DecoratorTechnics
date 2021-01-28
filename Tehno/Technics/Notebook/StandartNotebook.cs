@@ -8,7 +8,20 @@ namespace Tehno.Technics.Notebook
 {
     class StandartNotebook : Notebook
     {
-        public override string GetName { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
-        public override double GetCost { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
+        public StandartNotebook(ComputerTechnics computerTechnics)
+        {
+            this.computerTechnics = computerTechnics;
+        }
+        public override string GetName
+        {
+            get { return name; }
+            protected set { name = computerTechnics.GetName + " +Стандартный нотбук"; }
+        }
+        public override double GetCost
+        {
+            get { return cost; }
+            protected set { cost = computerTechnics.GetCost + 60000; }
+        }
     }
 }
+
